@@ -572,7 +572,7 @@ class sms_api {
      * @throws Exception if invalid message type
      */
     public function addMessage($message) {
-        if ($message instanceof mscl_sms_message) {
+        if ($message instanceof sms_message) {
             $this->_messages[] = $message;
             return $this;
         }
@@ -603,7 +603,7 @@ class sms_api {
         $messages = array();
 
         foreach ($this->getMessages() as $message) {
-            if ($message instanceof mscl_sms_message) {
+            if ($message instanceof sms_message) {
                 $stdClass = new stdClass();
 
                 $stdClass->{self::SENDER} = $message->getSender();
@@ -612,7 +612,7 @@ class sms_api {
                 $stdClass->{self::FLASH} = $message->getFlash();
 
                 if (1 == $message->getFlash()) {
-                    $message->setDatacoding(mscl_sms_message::FLASH);
+                    $message->setDatacoding(sms_message::FLASH);
                 }
 
                 $stdClass->{self::TYPE} = $message->getType();
@@ -659,7 +659,7 @@ class sms_api {
         $xml .= '</' . self::AUTHENTIFICATION . '>';
 
         foreach ($this->getMessages() as $message) {
-            if ($message instanceof mscl_sms_message) {
+            if ($message instanceof sms_message) {
                 $xml .= '<' . self::MESSAGE . '>';
 
                 $xml .= '<' . self::SENDER . '>' . $message->getSender() . '</' . self::SENDER . '>';
@@ -667,7 +667,7 @@ class sms_api {
                 $xml .= '<' . self::FLASH . '>' . $message->getFlash() . '</' . self::FLASH . '>';
 
                 if (1 == $message->getFlash()) {
-                    $message->setDatacoding(mscl_sms_message::FLASH);
+                    $message->setDatacoding(sms_message::FLASH);
                 }
 
                 $xml .= '<' . self::TYPE . '>' . $message->getType() . '</' . self::TYPE . '>';
@@ -729,7 +729,7 @@ class sms_api {
         $plain[self::IS_FLASH] = $message->getFlash();
 
         if (1 == $message->getFlash()) {
-            $message->setDatacoding(mscl_sms_message::FLASH);
+            $message->setDatacoding(sms_message::FLASH);
         }
 
         $plain[self::TYPE] = $message->getType();
