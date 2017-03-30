@@ -1,12 +1,9 @@
 <?php
 
 /**
- * MUNDE SOFTWARE COMPANY LIMITED[SCHOOL MANAGEMENT ERP]
- * Copyright (c) 2014,MSCL [ Zephania Eliah ]
+ * MUNDE SOFTWARE COMPANY LIMITED[MSCL START FRAMEWORK]
+ * Copyright (c) 2017,MSCL [ Zephania Eliah ]
  * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are not permitted in any means by the user:
  *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
@@ -24,7 +21,7 @@
  * @package     sms_api
  * @author      Munde Software Company LTD <info@mundeinc.com>
  * @author      Zephania Eliah <zmunde5@mundeinc.com>
- * @copyright   Copyright (c) 2013, Munde Software Company LTD.
+ * @copyright   Copyright (c) 2017, Munde Software Company LTD.
  * @category	Libraries
  * @version     1.0
  */
